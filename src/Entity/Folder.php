@@ -15,12 +15,9 @@ use App\Controller\FolderGetByPath;
  *     itemOperations={
  *        "delete",
  *        "get"={"method"="GET", "path"="/folders/{id}", "requirements"={"id"="\d+"}},
- *        "getByPath"={
- *          "method"="GET",
- *          "path"="/folders/path/{path}",
- *          "requirements"={"path"=".+"},
- *          "controller"=FolderGetByPath::class,
- *          "swagger_context": {
+ *        "get_by_path"={
+ *          "route_name"="get_by_path",
+ *     "swagger_context": {
  *              "parameters" = {
  *                {
  *                   "name" = "path",

@@ -22,8 +22,8 @@ class FolderRepository extends ServiceEntityRepository
     public function findByPath($path): ?Folder
     {
         return $this->createQueryBuilder('f')
-            ->andWhere('f.exampleField = :val')
-            ->setParameter('val', $path)
+            ->andWhere('f.path = :path')
+            ->setParameter('path', $path)
             ->getQuery()
             ->getOneOrNullResult()
             ;
